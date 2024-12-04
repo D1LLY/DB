@@ -22,7 +22,6 @@
             width: 100%;
             text-align: center;
         }
-	 
         main {
             margin-top: 20px;
             width: 90%;
@@ -93,32 +92,31 @@
 <body>
     <header>
         <h1>Submit Contract</h1>
-    
-    <nav>
-	<a href="home.html">Home</a>
-        <a href="RequestCare.html">Request Caregiver</a>
-        <a href="findContract.html">Caregiver Listings</a>
-        <a href="submit_contract.html">Create Contract</a>
-        <a href="updateProfile.html">Update Profile</a>
-        <a href="myProfile.html">View Profile</a>
-    </nav>
-	</header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="RequestCare.html">Request Caregiver</a>
+            <a href="findContract.html">Caregiver Listings</a>
+            <a href="submit_contract.html">Create Contract</a>
+            <a href="updateProfile.html">Update Profile</a>
+            <a href="myProfile.html">View Profile</a>
+        </nav>
+    </header>
     <main>
         <form action="submit_contract.php" method="POST">
             <label for="clientName">Client Name:</label>
             <input type="text" id="clientName" name="clientName" readonly>
 
             <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate" name="startDate" readonly>
+            <input type="date" id="startDate" name="startDate" required>
 
             <label for="endDate">End Date:</label>
-            <input type="date" id="endDate" name="endDate" readonly>
+            <input type="date" id="endDate" name="endDate" required>
 
             <label for="startTime">Start Time:</label>
-            <input type="time" id="startTime" name="startTime" readonly>
+            <input type="time" id="startTime" name="startTime" required>
 
             <label for="endTime">End Time:</label>
-            <input type="time" id="endTime" name="endTime" readonly>
+            <input type="time" id="endTime" name="endTime" required oninput="calculateDailyHours()">
 
             <label for="dailyHoursWorked">Daily Working Hours:</label>
             <input type="number" id="dailyHoursWorked" name="dailyHoursWorked" readonly>
